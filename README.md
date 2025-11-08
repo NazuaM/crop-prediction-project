@@ -1,45 +1,45 @@
-# Crop Prediction Model
+## Crop Prediction Model
 
-## Overview
-This project aims to predict the type of crop that can be grown based on soil nutrient levels (Nitrogen, Phosphorus, Potassium) and pH. The model uses logistic regression to classify crops based on these features and is evaluated using the F1 score.
+A machine learning model to predict the best crop to grow based on soil nutrient levels (Nitrogen, Phosphorus, Potassium) and pH. The model uses **Logistic Regression** and is evaluated using the **F1 score**.
 
-## Dataset
-The dataset used in this project contains the following columns:
-- **N**: Nitrogen level in the soil (numeric)
-- **P**: Phosphorus level in the soil (numeric)
-- **K**: Potassium level in the soil (numeric)
-- **ph**: pH level of the soil (numeric)
-- **crop**: Type of crop (target variable; could be multi-class)
+## 📁 Dataset
+The dataset contains the following columns:
 
-### Data Exploration
-Before training the model, the dataset was explored to:
-- Check for missing values.
-- Determine if the target variable (`crop`) is binary or multi-class.
-- Examine the unique crop types to understand the classification problem.
+- **N**: Nitrogen level in the soil (numeric)  
+- **P**: Phosphorus level in the soil (numeric)  
+- **K**: Potassium level in the soil (numeric)  
+- **ph**: pH level of the soil (numeric)  
+- **crop**: Target variable (type of crop; multi-class)
 
-## Methodology
-1. **Data Preprocessing**:
-   - Handled missing values (if any).
-   - Standardized features (N, P, K, and pH) using `StandardScaler`.
-   - Split the data into training and testing sets (70% training, 30% testing).
-   
-2. **Model Training**:
-   - Trained a **Logistic Regression** model on each feature independently and evaluated performance using F1 score.
-   - Also trained the model using all features together to improve accuracy.
+## 📊 Data Exploration
+- Checked for missing values  
+- Determined target variable type (multi-class)  
+- Examined unique crop types to understand the classification problem  
 
-3. **Model Evaluation**:
-   - The model was evaluated using **F1 score** (weighted average).
-   - Additional metrics like **accuracy**, **confusion matrix**, and **classification report** were also used to evaluate the performance.
+## 🛠 Methodology
+**Data Preprocessing:**
+- Handled missing values  
+- Standardized features using `StandardScaler`  
+- Split data into 70% training and 30% testing  
 
-4. **Best Feature Selection**:
-   - The feature with the highest F1 score was identified as the best predictive feature for crop prediction.
+**Model Training:**
+- Trained Logistic Regression on each feature independently  
+- Trained using all features together for better accuracy  
 
-## Requirements
-This project requires the following Python libraries:
-- `pandas`
-- `scikit-learn`
-- `matplotlib` (for visualizations, if any)
+**Model Evaluation:**
+- Evaluated using **F1 score**, accuracy, confusion matrix, and classification report  
+- Selected the feature with the highest predictive power for crop prediction  
 
-Install the required dependencies using:
-```bash
-pip install -r requirements.txt
+## 🧰 Tech Stack
+- Python  
+- pandas  
+- scikit-learn  
+- matplotlib (optional, for visualizations)
+
+## 📁 Project Structure
+
+crop-prediction-project/
+├── Crop_prediction.py
+├── soil_measures.csv
+├── README.md
+└── farmer-8294716_1280.webp (thumbnail)
